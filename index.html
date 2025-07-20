@@ -1,31 +1,25 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>15パズル</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
 <body>
-  <h1>15パズル</h1>
-  <img src="cute_cat.png" alt="かわいい猫" width="200">
-  <button id="shuffle-button">シャッフル & スタート</button>
+    <h1>15パズル</h1>
 
-  <div id="game-container">
-    <div id="puzzle-board"></div>
-    <div id="controls">
-      <div id="stats">
-        <p>Moves: <span id="move-count">0</span></p>
-        <p>Time: <span id="time-elapsed">0</span>s</p>
-      </div>
-      <div id="buttons">
-        <button id="restart-button">Restart</button>
-        <button id="newgame-button">New Game</button>
-      </div>
+    
+    <div style="text-align: center; margin-bottom: 10px;">
+        <img src="cute.cat.png" alt="猫の写真" style="max-width: 300px; border-radius: 12px;">
+        
     </div>
-    <p id="win-message" class="hidden">You Win!</p>
-  </div>
 
-  <script src="script.js"></script>
+    <div id="game-container">
+        <div id="puzzle-board"></div>
+        <div id="controls">
+            <div id="stats">
+                <p>Moves: <span id="move-count">0</span></p>
+                <p>Time: <span id="time-elapsed">0</span>s</p>
+            </div>
+            <div id="buttons">
+                <button id="restart-button">Restart</button>
+                <button id="shuffle-button">New Game</button>
+            </div>
+        </div>
+        <p id="win-message" class="hidden">You Win!</p>
+    </div>
+    <script src="index.js"></script>
 </body>
-</html>
