@@ -1,84 +1,112 @@
+/* 基本設定：フォント・背景・文字色 */
 body {
-    font-family: "Arial Rounded MT Bold", "Yu Gothic", sans-serif;
-    background-color: #fff8fc; /* やさしいピンク背景 */
-    color: #6a4e77;
+    font-family: "Rounded Mplus 1c", "Segoe UI", "Yu Gothic", sans-serif;
+    background-color: #fff0f5; /* やさしい桜ピンク */
+    color: #6a4e77; /* 落ち着いたラベンダー系グレー */
     text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
 }
 
+/* タイトル */
 h1 {
-    color: #f78fb3; /* ポップなピンク */
-    font-size: 2.2em;
+    color: #f78fb3; /* ビビッドなピンクでアクセント */
+    font-size: 2.4em;
     margin-bottom: 20px;
 }
 
-/* パズルボード */
+/* パズル全体の枠 */
+#game-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffeef5; /* 淡いピンク */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* パズルの盤面 */
 #puzzle-board {
     display: grid;
     grid-template-columns: repeat(4, 70px);
     grid-template-rows: repeat(4, 70px);
-    gap: 6px;
+    gap: 8px;
     justify-content: center;
     margin: 0 auto 20px;
-    padding: 10px;
-    background-color: #ffeef5;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* タイル */
+/* タイル（数字のあるパネル） */
 #puzzle-board div {
-    background-color: #ffd1dc; /* 淡いピンク */
-    color: #fff;
+    background-color: #ffd1dc; /* マカロンピンク */
+    border-radius: 12px;
     font-size: 22px;
     font-weight: bold;
-    border-radius: 10px;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
     cursor: pointer;
 }
 
+/* タイルのホバー効果 */
 #puzzle-board div:hover {
-    background-color: #f8b195;
+    background-color: #f8b195; /* サーモンピンクに変化 */
     transform: scale(1.05);
 }
 
-/* 空白タイル用（JS側で設定してね） */
+/* 空白マス（移動可能な位置） */
 .empty {
-    background-color: #fff;
+    background-color: #ffffff !important;
     box-shadow: none;
+    cursor: default;
 }
 
-/* ボタン */
+/* ステータス表示 */
+#stats {
+    margin-bottom: 10px;
+}
+
+#stats p {
+    font-size: 16px;
+    margin: 5px;
+}
+
+/* ボタンエリア */
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* ボタンデザイン */
 button {
-    background-color: #ffb6b9;
+    background-color: #a3d2ca; /* ミントブルー */
     color: white;
+    font-size: 16px;
+    padding: 10px 18px;
     border: none;
     border-radius: 12px;
-    padding: 10px 18px;
-    font-size: 16px;
-    margin: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #f78fb3;
-}
-
-/* ステータス */
-#stats p {
-    font-size: 16px;
-    margin: 6px;
+    background-color: #5eaaa8; /* 少し濃いブルーに */
 }
 
 /* 勝利メッセージ */
 #win-message {
-    font-size: 1.6em;
+    font-size: 1.8em;
     color: #f67280;
     margin-top: 20px;
+    font-weight: bold;
+}
+
+/* 非表示用クラス */
+.hidden {
+    display: none;
 }
