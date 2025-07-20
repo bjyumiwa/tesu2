@@ -1,3 +1,27 @@
-body {
-    background-color: pink !important;
+/* タイル共通 */
+.tile {
+    background-color: #ffd1dc;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* ホバー効果 */
+.tile:hover {
+    background-color: #f8b195;
+    transform: scale(1.05);
+}
+
+/* 空白タイル */
+.empty {
+    background-color: #ffffff !important;
+    box-shadow: none;
+    cursor: default;
 }
