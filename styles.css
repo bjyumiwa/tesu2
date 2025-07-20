@@ -1,27 +1,49 @@
-/* タイル共通 */
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+#game-container {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#puzzle-board {
+  width: 320px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2px;
+  margin: 0 auto;
+}
+
 .tile {
-    background-color: #ffd1dc;
-    border-radius: 12px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
-    cursor: pointer;
+  background-color: #ffe4e1;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #aaa;
+  transition: background-color 0.3s;
 }
 
-/* ホバー効果 */
-.tile:hover {
-    background-color: #f8b195;
-    transform: scale(1.05);
+.tile.empty {
+  background-color: #ffffff;
+  border: none;
+  cursor: default;
 }
 
-/* 空白タイル */
-.empty {
-    background-color: #ffffff !important;
-    box-shadow: none;
-    cursor: default;
+#win-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
 }
