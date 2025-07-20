@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e8f5e9; /* Very light green */
+    color: #2e7d32; /* Dark green */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    width: 320px;
+    height: 320px;
+    padding: 10px;
+    background-color: #a5d6a7; /* Light green */
+    border: 5px solid #388e3c; /* Darker green */
+    border-radius: 8px;
+    position: relative;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #4caf50; /* Medium green */
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+    position: absolute; /* For smooth animations */
+    width: 75px; /* (320 - 5*3) / 4 */
+    height: 75px;
+}
+
+.tile:hover {
+    background-color: #66bb6a; /* Lighter green on hover */
+}
+
+#controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#stats {
+    display: flex;
+    gap: 20px;
+}
+
+#buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #388e3c; /* Darker green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2e7d32; /* Even darker green on hover */
+}
+
+#win-message {
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1b5e20; /* Darkest green */
+}
+
+.hidden {
+    display: none;
+}
